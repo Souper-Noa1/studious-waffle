@@ -1,0 +1,47 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background-color: orange;
+    color: white;
+}
+.content {
+    width: 1000px;
+    height: 200px;
+    padding: 20px; ;
+    background-color: #5181c9;
+    position: relative;
+    overflow: hidden;
+}
+.content::before{
+    content:"";
+    display: block;
+    background: rgba(6, 6, 6, 0.164);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+}
+.content::after{
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.208);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 100px;
+}
+
+.content .inner-content {
+    padding-top: 50px;
+    font-size: 70;
+    z-index: 1;
+    position: relative;
+}
